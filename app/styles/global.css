@@ -9,4 +9,9 @@ body {
   font: 16px;
 }
 
+.resume {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 /*# sourceMappingURL=global.css.map */
