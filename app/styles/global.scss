@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Train+One&display=swap');
+
 body, 
 body *:not(script):not(style) {
     all: unset;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Quicksand", sans-serif;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
 }
 body {
     font: 16px;
@@ -11,6 +15,14 @@ body {
 .root {
     .container {
         
+    }
+    .panel {
+        margin: 1rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 1.4rem 1.6rem;
+        display: grid;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     }
 }
 

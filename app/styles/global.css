@@ -1,17 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Train+One&display=swap");
 body,
 body *:not(script):not(style) {
   all: unset;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Quicksand", sans-serif;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
 body {
   font: 16px;
 }
 
+.root .panel {
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.4rem 1.6rem;
+  display: grid;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
 .resume {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  .resume {
+    grid-template-columns: 1fr;
+  }
+}
+.resume main {
+  background-color: rgb(241, 241, 241);
+}
+.resume aside {
+  background-color: #055;
+}
+.resume .resume--intro {
+  grid-template-columns: 0.75fr 3.25fr;
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 1080px) {
+  .resume .resume--intro {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+@media screen and (max-width: 640px) {
+  .resume .resume--intro {
+    grid-template-columns: 1fr;
+  }
+  .resume .resume--intro img {
+    max-height: 30vh;
+    width: unset !important;
+    margin: 0 auto;
+  }
+}
+.resume .resume--intro img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: double 0.75rem #055;
+}
+.resume .resume--intro section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resume .resume--intro section h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.resume .resume--intro section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=global.css.map */
