@@ -1,0 +1,12 @@
+body,
+body *:not(script):not(style) {
+  all: unset;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font: 16px;
+}
+
+/*# sourceMappingURL=global.css.map */
