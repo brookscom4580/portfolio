@@ -6,6 +6,7 @@ type RoleProps = {
   endDate?: string;
   description?: string;
   achievements?: string[];
+  tags?: string[];
 };
 
 export default function Role({
@@ -16,24 +17,37 @@ export default function Role({
   endDate,
   description,
   achievements,
+  tags,
 }: RoleProps) {
   return (
     <div className="resume--role">
       <h4>{title}</h4>
-      <h5>{company}</h5>
-      <p>{location}</p>
-      <p>
+      <h5 className="place">
+        <span>{company}</span>
+        <p className="location">{location}</p>
+      </h5>
+      <p className="timeline">
         {startDate} - {endDate || "Present"}
       </p>
+
       {description && <p>{description}</p>}
       {achievements && (
         <>
-          <h5>Notable Achievements</h5>
+          <h6>Notable Achievements</h6>
           <ul>
             {achievements?.map((achievement, index) => (
               <li key={index}>{achievement}</li>
             ))}
           </ul>
+        </>
+      )}
+      {tags && (
+        <>
+          {tags?.map((tag, index) => (
+            <span className="tag" key={index}>
+              {tag}
+            </span>
+          ))}
         </>
       )}
     </div>

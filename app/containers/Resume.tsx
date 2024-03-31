@@ -7,15 +7,17 @@ import Skills from "./components/Skills";
 export default function Resume() {
   return (
     <div className="container resume">
+      <aside>
+        <div className="wrapper">
+            <Intro />
+            <Contact />
+            <Skills />
+        </div>
+      </aside>
       <main>
-        <Intro />
         <Roles />
         <Education />
       </main>
-      <aside>
-        <Contact />
-        <Skills />
-      </aside>
     </div>
   );
 }

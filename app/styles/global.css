@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Train+One&display=swap");
 body,
 body *:not(script):not(style):not(ul):not(li) {
@@ -23,7 +24,7 @@ body {
 
 .resume {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
   height: 100vh;
 }
 @media screen and (max-width: 768px) {
@@ -37,31 +38,14 @@ body {
 .resume aside {
   background-color: #055;
 }
-.resume .resume--intro {
-  grid-template-columns: 0.75fr 3.25fr;
-  grid-gap: 2rem;
-}
-@media screen and (max-width: 1080px) {
-  .resume .resume--intro {
-    grid-template-columns: 1fr 3fr;
-  }
-}
-@media screen and (max-width: 640px) {
-  .resume .resume--intro {
-    grid-template-columns: 1fr;
-  }
-  .resume .resume--intro img {
-    max-height: 30vh;
-    width: unset !important;
-    margin: 0 auto;
-  }
-}
 .resume .resume--intro img {
-  width: 100%;
+  margin: 0 auto;
+  max-height: 25vh;
   max-width: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: double 0.75rem #055;
+  filter: brightness(1.3);
 }
 .resume .resume--intro section {
   display: flex;
@@ -69,19 +53,32 @@ body {
   justify-content: center;
 }
 .resume .resume--intro section h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.9rem;
+  margin: 0.5rem 0 0 0;
   font-weight: 500;
+  text-align: center;
 }
 .resume .resume--intro section h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 400;
+  text-align: center;
 }
 .resume .panel h3 {
   font-size: 1.5rem;
   margin-bottom: 0.25rem;
   font-weight: 600;
+}
+.resume .panel h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.resume .panel a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.resume .panel a:hover {
+  text-decoration: underline;
 }
 .resume .panel .resume--role {
   margin-bottom: 1rem;
@@ -90,8 +87,45 @@ body {
   font-weight: 500;
   font-size: 1.15rem;
 }
-.resume .panel .resume--role h4, .resume .panel .resume--role h5, .resume .panel .resume--role p, .resume .panel .resume--role ul {
+.resume .panel .resume--role h4, .resume .panel .resume--role h5, .resume .panel .resume--role h6, .resume .panel .resume--role p, .resume .panel .resume--role ul {
   display: block;
+}
+.resume .panel .resume--role ul {
+  margin: 0 0 1rem 0.5rem;
+}
+.resume .panel .resume--role h6 {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+.resume .panel .resume--role .place {
+  display: inline-flex;
+  flex-direction: row;
+  grid-gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.resume .panel .resume--role .place .location::before {
+  display: inline-block;
+  content: "•";
+  margin-right: 0.5rem;
+}
+.resume .panel .resume--role .timeline {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.resume .panel .resume--role .tag {
+  display: inline-block;
+  background-color: #055;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+.resume aside .wrapper {
+  position: sticky;
+  top: 1rem;
 }
 
 /*# sourceMappingURL=global.css.map */
