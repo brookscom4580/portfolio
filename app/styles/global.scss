@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Train+One&display=swap');
 
 body, 
-body *:not(script):not(style) {
+body *:not(script):not(style):not(ul):not(li) {
     all: unset;
     box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
@@ -13,9 +13,6 @@ body {
 }
 
 .root {
-    .container {
-        
-    }
     .panel {
         margin: 1rem;
         background-color: #fff;

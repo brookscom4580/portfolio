@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Train+One&display=swap");
 body,
-body *:not(script):not(style) {
+body *:not(script):not(style):not(ul):not(li) {
   all: unset;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
@@ -77,6 +77,21 @@ body {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 400;
+}
+.resume .panel h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.resume .panel .resume--role {
+  margin-bottom: 1rem;
+}
+.resume .panel .resume--role h4 {
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+.resume .panel .resume--role h4, .resume .panel .resume--role h5, .resume .panel .resume--role p, .resume .panel .resume--role ul {
+  display: block;
 }
 
 /*# sourceMappingURL=global.css.map */

@@ -48,4 +48,21 @@
             }
         }
     }
+    .panel {
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: .25rem;
+            font-weight: 600;
+        }
+        .resume--role {
+            margin-bottom: 1rem;
+            h4 {
+                font-weight: 500;
+                font-size: 1.15rem;
+            }
+            h4, h5, p, ul {
+                display: block;
+            }
+        }
+    }
 }

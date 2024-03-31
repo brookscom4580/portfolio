@@ -3,7 +3,7 @@ import Resume from "~/containers/Resume";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Greg Brooks - Software Engineering - Seattle, WA" },
+    { title: "Greg Brooks - Software Engineering Leader - Seattle, WA" },
     {
       name: "description",
       content:
