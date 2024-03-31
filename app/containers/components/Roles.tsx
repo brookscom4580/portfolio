@@ -14,11 +14,11 @@ export default function Roles() {
           "Designed and managed the development a system using AWS serverless services and infrastructure to replace Ansira's use of BluePrism saving the company ~$180k per year.",
           "Designed and managed the development of a new platform to for the simpler integration and management of third party code into Ansira's proprietary website platform.",
           "Designed and managed the development of a new UI, service and library to manage the content on Ansira Edge Channel Engagement module websites, saving ~40% of one developer's time and simplifying the process overall.",
-          "Managed the continuous development, maintenance and troubleshooting of ~390 vendor integrations with Ansira's proprietary website platform.",
-          "Managed the continuous development and maintenance of hundreds of custom/niche solutions that extend the functionality of Ansira's proprietary website platform.",
-          "Managed the continuous development and maintenance of ~60 mostly internally facing tools that support and bring efficiencies to workflows of many teams within Ansira.",
-          "Ran weekly sprint planning, grooming, and retrospectives for the team. Managed the team's Jira boards and ensured that the team was working on the highest priority items.",
-          "Conducted 1:1s with each team member to provide feedback, coaching, and support. Conducted yearly performance reviews and set goals for each team member.",
+          "Manage the continuous development, maintenance and troubleshooting of ~390 vendor integrations with Ansira's proprietary website platform.",
+          "Manage the continuous development and maintenance of hundreds of custom/niche solutions that extend the functionality of Ansira's proprietary website platform.",
+          "Manage the continuous development and maintenance of ~60 mostly internally facing tools that support and bring efficiencies to workflows of many teams within Ansira.",
+          "Run weekly sprint planning, backlog grooming, and retrospectives for the team. Manage the team's Jira boards and ensured that the team was working on the highest priority items.",
+          "Conduct 1:1s with each team member to provide feedback, coaching, and support. Conduct yearly performance reviews and set goals for each team member.",
         ]}
         tags={[
           "Management",

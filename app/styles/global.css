@@ -88,6 +88,7 @@ body {
   display: inline-block;
   vertical-align: text-bottom;
   margin-right: 0.5rem;
+  color: var(--featured-color);
 }
 .resume .panel .resume--role {
   margin-bottom: 1rem;
