@@ -7,6 +7,7 @@ type RoleProps = {
   description?: string;
   achievements?: string[];
   tags?: string[];
+  link?: string;
 };
 
 export default function Role({
@@ -18,10 +19,11 @@ export default function Role({
   description,
   achievements,
   tags,
+  link
 }: RoleProps) {
   return (
     <div className="resume--role">
-      <h4>{title}</h4>
+      <h4>{title} {link && <a href={link} target="_blank"><span className="icon material-symbols-outlined">link</span></a>}</h4> 
       <h5 className="place">
         <span>{company}</span>
         <p className="location">{location}</p>

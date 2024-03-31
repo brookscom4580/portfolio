@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Train+One&display=swap');
 
+:root {
+    --featured-color: #055;
+}
+
 body, 
 body *:not(script):not(style):not(ul):not(li) {
     all: unset;

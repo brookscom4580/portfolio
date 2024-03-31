@@ -121,14 +121,6 @@ export default function Roles() {
         startDate="October 2013"
         endDate="August 2015"
         description="My day to day tasks include troubleshooting and finding resolutions to existing bugs in code as well as writing new code to provide enhancements to the Cobalt 'Websites' platform. I also provide front end web development and design work for OEM accounts including General Motors (US, Canada (EN & FR), Mexico (ES), Australia, New Zealand), Toyota, Lexus, Kia, Hyundai, Volkswagen, BMW, and MINI."
-        tags={[
-          "HTML",
-          "CSS",
-          "jQuery",
-          "JavaScript",
-          "PHP",
-          "Photoshop"
-        ]}
       />
       <Role
         title="Web Design Specialist"
