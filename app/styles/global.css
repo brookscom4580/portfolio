@@ -11,19 +11,34 @@ body *:not(script):not(style):not(ul):not(li) {
   font-family: "Quicksand", sans-serif;
   -webkit-print-color-adjust: exact !important;
   print-color-adjust: exact !important;
+  transition: all 2s;
 }
 
 body {
   font: 16px;
+  background: #f1f1f1;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+  }
 }
 
 .root .panel {
   margin: 1rem;
   background-color: #fff;
+  color: #000;
   border-radius: 1rem;
   padding: 1.4rem 1.6rem;
   display: grid;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+@media (prefers-color-scheme: dark) {
+  .root .panel {
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  }
 }
 
 .resume {
@@ -35,9 +50,6 @@ body {
   .resume {
     grid-template-columns: 1fr;
   }
-}
-.resume main {
-  background-color: rgb(241, 241, 241);
 }
 .resume aside {
   background-color: var(--featured-color);

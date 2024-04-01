@@ -5,9 +5,6 @@
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
     }
-    main {
-        background-color: rgb(241, 241, 241);
-    }
     aside {
         background-color: var(--featured-color);
     }

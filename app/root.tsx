@@ -8,6 +8,8 @@ import {
 
 import { LinksFunction } from "@remix-run/node";
 
+import { ClientOnly } from "remix-utils/client-only";
+
 import globalStyles from "../app/styles/global.css?url";
 
 export const links: LinksFunction = () => [
@@ -48,6 +50,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {children}
         <ScrollRestoration />
         <Scripts />
+        <ClientOnly>
+          {() => {
+            const colors = ["#055", "#2c484a", "#4a1f25", "#12440e", "#806533"];
+            setInterval(() => {
+              //@ts-ignore
+              document.querySelector(':root')?.style?.setProperty("--featured-color",  colors[Math.floor(Math.random() * colors.length)]);
+            }, 10000);
+            return <></>
+          }}
+        </ClientOnly>
       </body>
     </html>
   );
