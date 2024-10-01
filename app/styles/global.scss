@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Train+One&display=swap');
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 :root {
     --featured-color: #055;
 }
 
-body, 
+body,
 body *:not(script):not(style):not(ul):not(li) {
     all: unset;
     box-sizing: border-box;
@@ -13,6 +14,7 @@ body *:not(script):not(style):not(ul):not(li) {
     print-color-adjust: exact !important;
     transition: all 2s;
 }
+
 body {
     font: 16px;
     background: #f1f1f1;
@@ -21,21 +23,155 @@ body {
     }
 }
 
-.root {
-    .panel {
-        margin: 1rem;
-        background-color: #fff;
-        color: #000;
-        border-radius: 1rem;
-        padding: 1.4rem 1.6rem;
+@mixin tag {
+    display: inline-block;
+    background-color: var(--featured-color);
+    color: #fff;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    font-size: .75rem;
+}
+
+@mixin card {
+    &.card-linking {
+        text-decoration: none;
+    }
+    .card--media {
         display: grid;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-        @media (prefers-color-scheme: dark) {
-            background-color: #222;
-            color: #fff;
-            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+        grid-gap: 1rem;
+        &[data-count="2"] {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &[data-count="3"] {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &[data-count="4"] {
+            grid-template-columns: repeat(2, 1fr);
+            .img {
+                height: 10rem;
+            }
+            @media (max-width: 1024px) {
+                .img {
+                    height: 6.5rem;
+                }
+            }
+        }
+        .img {
+            max-width: 100%;
+            height: 20rem;
+            object-fit: cover;
+            background-position: center;
+            border-radius: 1rem;
+            @media (max-width: 1024px) {
+                height: 14rem;
+            }
+        }
+    }
+    .card--content {
+        padding: 1rem;
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+            display: block;
+        }
+        p {
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .tag {
+            @include tag;
+        }
+        a, div.cta {
+            color: var(--featured-color);
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+            &.cta {
+                display: block;
+                text-align: center;
+                background-color: #eee;
+                border-radius: 30rem;
+                padding: .5rem;
+                font-weight: 600;
+                @media(prefers-color-scheme: dark) {
+                    background-color: #000;
+                    font-weight: 800;
+                }
+            }
         }
     }
 }
 
+@mixin panel {
+    margin: 1rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 1rem;
+    padding: 1.4rem 1.6rem;
+    display: grid;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    @media (prefers-color-scheme: dark) {
+        background-color: #222;
+        color: #fff;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    }
+
+}
+
+.panel {
+    @include panel;
+}
+
+.root {
+    .portfolio-item {
+        @include card;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+        }
+        .card {
+           @include card;
+        }
+    }
+}
+
+small {
+    font-size: 75% !important;
+}
+
+.back {
+    margin-bottom: 1rem;
+}
+
+.embla {
+    overflow: hidden;
+    * {
+        transition: all 0s !important;
+    }
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    img {
+        margin: 0 auto;
+        display: block;
+        border-radius: 1rem;
+    }
+}
 @import "./resume/resume.scss";

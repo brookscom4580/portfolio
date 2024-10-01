@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div className="resume--contact panel">
-      <h4>Contact</h4>
+      <h4>Let's chat</h4>
       <p>
         <a href="mailto:greg@brooksg.dev">
           <span className="icon material-symbols-outlined">mail</span>

@@ -6,6 +6,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import TagManager from 'react-gtm-module';
+
 import { LinksFunction } from "@remix-run/node";
 
 import { ClientOnly } from "remix-utils/client-only";
@@ -20,15 +22,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T9WD37B2');`,
-          }}
-        ></script>
+      <ClientOnly>
+          {() => { TagManager.initialize({gtmId: "GTM-T9WD37B2"}); return <></> }}
+      </ClientOnly>
+        
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
@@ -56,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             setInterval(() => {
               //@ts-ignore
               document.querySelector(':root')?.style?.setProperty("--featured-color",  colors[Math.floor(Math.random() * colors.length)]);
-            }, 10000);
+            }, 20000);
             return <></>
           }}
         </ClientOnly>

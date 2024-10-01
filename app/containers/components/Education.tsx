@@ -3,7 +3,7 @@ import Role from "./Role";
 export default function Education() {
   return (
     <div className="resume--education resume--roles panel">
-      <h3>Education</h3>
+      <h3>Education <small>&amp;</small> Certifications</h3>
       <Role
         title="Certified Cloud Solutions Architect - Associate"
         company="Amazon Web Services"

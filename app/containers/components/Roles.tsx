@@ -6,7 +6,7 @@ export default function Roles() {
       <h3>Work Experience</h3>
       <Role
         title="Software Engineering Manager"
-        company="Ansira / Sincro"
+        company="DealerOn / Ansira / Sincro"
         location="Seattle, WA"
         startDate="April 2022"
         description="In this role I manage and mentor a distributed team of 6 full stack engineers that services several products and service lines across Ansira's business. I am responsible for the technical direction, code quality, and the overall health and morale of the team. I work closely with product managers, designers, and other stakeholders to ensure that the team is delivering high quality software that meets the needs of our customers. This role is a mix of technical leadership (system design & direct contribution to our code bases), people management, and project management."

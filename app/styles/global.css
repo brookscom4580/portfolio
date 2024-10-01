@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Train+One&display=swap");
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
 :root {
   --featured-color: #055;
 }
@@ -24,7 +25,7 @@ body {
   }
 }
 
-.root .panel {
+.panel {
   margin: 1rem;
   background-color: #fff;
   color: #000;
@@ -34,11 +35,214 @@ body {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 @media (prefers-color-scheme: dark) {
-  .root .panel {
+  .panel {
     background-color: #222;
     color: #fff;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   }
+}
+
+.root .portfolio-item.card-linking {
+  text-decoration: none;
+}
+.root .portfolio-item .card--media {
+  display: grid;
+  grid-gap: 1rem;
+}
+.root .portfolio-item .card--media[data-count="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+.root .portfolio-item .card--media[data-count="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+.root .portfolio-item .card--media[data-count="4"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+.root .portfolio-item .card--media[data-count="4"] .img {
+  height: 10rem;
+}
+@media (max-width: 1024px) {
+  .root .portfolio-item .card--media[data-count="4"] .img {
+    height: 6.5rem;
+  }
+}
+.root .portfolio-item .card--media .img {
+  max-width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+@media (max-width: 1024px) {
+  .root .portfolio-item .card--media .img {
+    height: 14rem;
+  }
+}
+.root .portfolio-item .card--content {
+  padding: 1rem;
+}
+.root .portfolio-item .card--content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.root .portfolio-item .card--content p {
+  margin-bottom: 1rem;
+  display: block;
+}
+.root .portfolio-item .card--content .tag {
+  display: inline-block;
+  background-color: var(--featured-color);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+.root .portfolio-item .card--content a, .root .portfolio-item .card--content div.cta {
+  color: var(--featured-color);
+  text-decoration: none;
+}
+.root .portfolio-item .card--content a:hover, .root .portfolio-item .card--content div.cta:hover {
+  text-decoration: underline;
+}
+.root .portfolio-item .card--content a.cta, .root .portfolio-item .card--content div.cta.cta {
+  display: block;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 30rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+@media (prefers-color-scheme: dark) {
+  .root .portfolio-item .card--content a.cta, .root .portfolio-item .card--content div.cta.cta {
+    background-color: #000;
+    font-weight: 800;
+  }
+}
+.root .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+@media (max-width: 768px) {
+  .root .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .root .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.root .cards .card.card-linking {
+  text-decoration: none;
+}
+.root .cards .card .card--media {
+  display: grid;
+  grid-gap: 1rem;
+}
+.root .cards .card .card--media[data-count="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+.root .cards .card .card--media[data-count="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+.root .cards .card .card--media[data-count="4"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+.root .cards .card .card--media[data-count="4"] .img {
+  height: 10rem;
+}
+@media (max-width: 1024px) {
+  .root .cards .card .card--media[data-count="4"] .img {
+    height: 6.5rem;
+  }
+}
+.root .cards .card .card--media .img {
+  max-width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+@media (max-width: 1024px) {
+  .root .cards .card .card--media .img {
+    height: 14rem;
+  }
+}
+.root .cards .card .card--content {
+  padding: 1rem;
+}
+.root .cards .card .card--content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.root .cards .card .card--content p {
+  margin-bottom: 1rem;
+  display: block;
+}
+.root .cards .card .card--content .tag {
+  display: inline-block;
+  background-color: var(--featured-color);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+.root .cards .card .card--content a, .root .cards .card .card--content div.cta {
+  color: var(--featured-color);
+  text-decoration: none;
+}
+.root .cards .card .card--content a:hover, .root .cards .card .card--content div.cta:hover {
+  text-decoration: underline;
+}
+.root .cards .card .card--content a.cta, .root .cards .card .card--content div.cta.cta {
+  display: block;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 30rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+@media (prefers-color-scheme: dark) {
+  .root .cards .card .card--content a.cta, .root .cards .card .card--content div.cta.cta {
+    background-color: #000;
+    font-weight: 800;
+  }
+}
+
+small {
+  font-size: 75% !important;
+}
+
+.back {
+  margin-bottom: 1rem;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla * {
+  transition: all 0s !important;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__slide img {
+  margin: 0 auto;
+  display: block;
+  border-radius: 1rem;
 }
 
 .resume {

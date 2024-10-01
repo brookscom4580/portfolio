@@ -2,7 +2,6 @@ import Intro from "./components/Intro";
 import Roles from "./components/Roles";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-import Skills from "./components/Skills";
 
 export default function Resume() {
   return (
@@ -11,7 +10,6 @@ export default function Resume() {
         <div className="wrapper">
             <Intro />
             <Contact />
-            <Skills />
         </div>
       </aside>
       <main>
