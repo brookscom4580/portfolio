@@ -29,7 +29,6 @@ body {
   margin: 1rem;
   background-color: #fff;
   color: #000;
-  border-radius: 1rem;
   padding: 1.4rem 1.6rem;
   display: grid;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
@@ -95,7 +94,6 @@ body {
   background-color: var(--featured-color);
   color: #fff;
   padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 0.75rem;
